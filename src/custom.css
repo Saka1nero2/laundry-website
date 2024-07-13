@@ -1,0 +1,6 @@
+.navbar-custom{
+  background-color: rgba(90, 153, 193, 0.566);
+}
+.nav-link:hover{
+  color: #3498db;
+}
