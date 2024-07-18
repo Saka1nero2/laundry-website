@@ -7,6 +7,8 @@ import Services from './pages/Services';
 import Prices from './pages/Prices';
 import FindLocation from './pages/FindLocation';
 import MyAccount from './pages/MyAccount';
+import Myform from './components/Myform';
+
 
 const App = () => {
     return (
@@ -19,7 +21,10 @@ const App = () => {
                 <Route path="/prices" element={<Prices />} />
                 <Route path="/find-location" element={<FindLocation />} />
                 <Route path="/my-account" element={<MyAccount />} />
+                <Route path="/login" element={Myform} />
             </Routes>
+
+            
         </Router>
     );
 };

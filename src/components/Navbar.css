@@ -9,7 +9,8 @@
 .navbar-nav .nav-link{
   color: #FFD700;
   font-family: Poppins, Monaco, sans-serif;
+  font-size: 20px;
 }
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link:active {
   color: gray;
 }

@@ -1,9 +1,10 @@
 import React from 'react';
+import Myform from '../components/Myform';
 
 const MyAccount = () => {
   return (
     <div>
-      <h1>MyAccount</h1>
+      <Myform/>
     </div>
   );
 }

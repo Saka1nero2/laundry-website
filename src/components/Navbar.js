@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
 import picture from '../assets/images/picture.png';
 import './Navbar.css';
 
@@ -8,7 +9,7 @@ const NavigationBar = () => {
   return (
       <Navbar bg="light" expand="lg">
           <Container>
-              <Navbar.Brand as={Link} to="#">
+              <Navbar.Brand as={Link} to="/">
                 <img
                 src={picture}
                 width="30"
