@@ -1,0 +1,22 @@
+.login-container {
+  background-color: #f8f8f8;
+}
+
+.login-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.forgot-password-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+button i {
+  font-size: 1.2rem;
+}
