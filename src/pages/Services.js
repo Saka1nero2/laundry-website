@@ -1,10 +1,13 @@
 import React from 'react';
+import ServicesCard from '../components/servicesCard';
 
-const Services = () => {
+const Services = () =>{
   return (
     <div>
-      <h1>Services</h1>
+      <ServicesCard />
     </div>
+      
+  
   );
 }
 

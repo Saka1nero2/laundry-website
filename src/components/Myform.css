@@ -8,10 +8,7 @@ h4{
   align-items: center;
   height: 50vh;
 }
-.custom-input{
-  border-radius: 20px;
-  background-color: #D9D9D9;
-}
+
 .createAccountbutton{
   width: 100%;
   margin-bottom: 10px;
@@ -37,4 +34,7 @@ h4{
   background-color: pink; /* Change this to your desired color */
   border-color: black;     /* Change this to match the background color */
   color: white;  
+}
+.custom-input{
+  background-color: #D9D9D9;
 }
