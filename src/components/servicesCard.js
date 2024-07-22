@@ -1,25 +1,25 @@
 import React from 'react';
 import {Container,Row ,Col ,Card} from 'react-bootstrap';
-import service1 from '../assets/images/service1.png'
-import service2 from '../assets/images/service2.png'
-import service3 from '../assets/images/service3.png'
-import service4 from '../assets/images/service4.png'
-import service5 from '../assets/images/service5.png'
-import service6 from '../assets/images/service6.png'
+import service1 from '../assets/images/service1.jpeg'
+import service2 from '../assets/images/service2.jpeg'
+import service3 from '../assets/images/service3.jpeg'
+import service4 from '../assets/images/service4.jpeg'
+import service5 from '../assets/images/service5.jpeg'
+import service6 from '../assets/images/service6.jpeg'
 import '../components/servicesCard.css';
 
 
 function ServicesPage(){
   return(
     <Container className="text-center my-5">
-      <h1 className="my-4">OUR SERVICES</h1>
+      <h2 className="my-4 heading-2">OUR SERVICES</h2>
       <p className="mb-5">
         At Laundry King, we understand the importance of clean and fresh clothing. That's why we offer reliable and efficient laundry services to cater to your needs. Our expert team ensures that your clothes are washed and folded with care, using top-notch equipment and eco-friendly practices.
       </p>
 
       <Row className="justify-content-center">
         <Col md={6} lg={4} className="mb-5">
-          <h3 className="service-title">WASH AND FOLD</h3>
+          <h4 className="service-title">WASH AND FOLD</h4>
           <Card className="custom-card">
             <Card.Img variant="top" src={service1} />
             <Card.Body>
@@ -31,7 +31,7 @@ function ServicesPage(){
           </Card>
         </Col>
         <Col md={6} lg={4} className="mb-5">
-          <h3 className="service-title">WASH AND TOUCH</h3>
+          <h4 className="service-title">WASH AND TOUCH</h4>
           <Card className="custom-card">
             <Card.Img variant="top" src={service2} />
             <Card.Body>
@@ -43,7 +43,7 @@ function ServicesPage(){
           </Card>
         </Col>
         <Col md={6} lg={4} className="mb-5">
-          <h3 className="service-title">IRONING & PRESSING</h3>
+          <h4 className="service-title">IRONING & PRESSING</h4>
           <Card className="custom-card">
             <Card.Img variant="top" src={service3}/>
             <Card.Body>
@@ -55,7 +55,7 @@ function ServicesPage(){
           </Card>
         </Col>
         <Col md={6} lg={4} className="mb-5">
-          <h3 className="service-title">DRY WASHING</h3>
+          <h4 className="service-title">DRY WASHING</h4>
           <Card className="custom-card">
             <Card.Img variant="top" src={service4} />
             <Card.Body>
@@ -67,7 +67,7 @@ function ServicesPage(){
           </Card>
         </Col>
         <Col md={6} lg={4} className="mb-5">
-          <h3 className="service-title">CONTRACTUAL</h3>
+          <h4 className="service-title">CONTRACTUAL</h4>
           <Card className="custom-card">
             <Card.Img variant="top" src={service5} />
             <Card.Body>
@@ -78,7 +78,7 @@ function ServicesPage(){
           </Card>
         </Col>
         <Col md={6} lg={4} className="mb-5">
-          <h3 className="service-title">SPECIALITY SERVICES</h3>
+          <h4 className="service-title">SPECIALITY SERVICES</h4>
           <Card className="custom-card">
             <Card.Img variant="top" src={service6} />
             <Card.Body>
@@ -90,7 +90,46 @@ function ServicesPage(){
           </Card>
         </Col>
       </Row>
+      <div className="footer-line"></div>
+     <footer className="footer">
+        <Container>
+          <Row className="footer-container">
+             <div>
+                <h5>LAUNDRY KING</h5>
+                <p>Your Clothes, Our care!</p>
+              </div>
+              <div>
+                <h5>For Beginners</h5>
+                <ul>
+                  <li>New Account</li>
+                  <li>Start Booking a delivery or pickup</li>
+                  <li>Use Payments</li>
+                 </ul>
+              </div>
+              <div>
+                <h5>Explore Us</h5>
+                <ul>
+                  <li>Our Services</li>
+                  <li>Privacy</li>
+                  <li>Terms & Conditions</li>
+                </ul>
+              </div>
+              <div>
+                <h5>Connect Us</h5>
+                <ul>
+                  <li><i className="fa fa-envelope"></i> SudsWash@gmail.com</li>
+                  <li><i className="fa fa-phone"></i> 0242455562</li>
+                  <li><i className="fa fa-phone"></i> 0242455562</li>
+                  <li><i className="fa fa-map-marker"></i> Parku Estate</li>
+                </ul>
+              </div>
+          </Row>
+            <p>Copyright 2024 • All rights reserved • SudsWash</p>
+      </Container>
+    </footer>
     </Container>
+
+
   );
 }
 

@@ -14,3 +14,32 @@
 .navbar-nav .nav-link:active {
   color: gray;
 }
+body{
+  padding-top: 50px;
+}
+.nav-link {
+  position: relative;
+  color: #000; /* Adjust the default link color */
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #000; /* Adjust the underline color */
+  transition: width 0.3s ease, right 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff; /* Adjust the hover color */
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  right: 0;
+}

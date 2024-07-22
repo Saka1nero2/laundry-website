@@ -1,0 +1,80 @@
+.custom-card {
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card .card-img-top {
+  
+  object-fit : cover;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.heading-2 {
+  font-size: 2.5rem;
+  color: #ffbb33; /* Custom color for the heading */
+}
+
+.service-title {
+  font-size: 1.25rem;
+  color: #ffbb33; /* Custom color for the service title */
+  margin-bottom: 10px;
+}
+.card-img-top{
+  border-radius: 0;
+}
+
+.foooter{
+  background-color: #f8f9fa;
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px 0;
+}
+.footer h5{
+  margin-bottom: 10px;
+  color: #ffbb33;
+}
+.foooter p , .footer ul , .footer li{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #6c757d;
+}
+
+.footer ul{
+  padding-left: 0;
+}
+
+.footer li{
+  margin-bottom: 5px;
+}
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container > div{
+  flex: 1;
+  padding: 10px;
+}
+.footer-container{
+  margin-top: 10px;
+}
+
+.footer-line {
+  border-top: 1px solid #ccc;
+  margin-bottom: 50px;
+  margin-top: 200px;
+  width: 100%;
+}

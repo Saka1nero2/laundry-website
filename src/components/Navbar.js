@@ -7,7 +7,7 @@ import './Navbar.css';
 
 const NavigationBar = () => {
   return (
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="light" expand="lg" fixed='top'>
           <Container>
               <Navbar.Brand as={Link} to="/">
                 <img
