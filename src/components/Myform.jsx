@@ -1,4 +1,4 @@
-import React from 'react';
+import {React,useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './Myform.css';
@@ -6,8 +6,37 @@ import { Container} from 'react-bootstrap';
 import {faGoogle, faFacebook, faApple} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
+import axios from 'axios'
+import {toast} from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom';
 
 const Myform = () =>{
+  const navigate = useNavigate()
+  const [data,setData] = useState({
+    name: '',
+    email: '',
+    password: ''
+  })
+
+  const registerUser = async (e) => {
+    e.preventDefault()
+    const {name, email, password} = data
+    try {
+      const {data} = await axios.post('/register', {
+        name, email, password
+      })
+      if(data.error) {
+        toast.error(data.error)
+      } else {
+        setData({})
+        toast.success(`Registration Successful. Welcome ${data.name}`)
+        navigate("/")
+      }
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return(
     <div className='user-account'>
       <div>
@@ -15,13 +44,17 @@ const Myform = () =>{
       </div>
       
       <Container className="login-container">
-        <Form>
+        <Form onSubmit={registerUser}>
+        <Form.Group className="mb-2" controlId="formBasicName">
+            <Form.Control type="text" placeholder="Enter Your Name" className='custom-input' value={data.name} onChange={(e) => setData({...data, name: e.target.value})}/>
+          </Form.Group>
+
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="email" placeholder="Email Address" className='custom-input'/>
+            <Form.Control type="email" placeholder="Email Address" className='custom-input' value={data.email} onChange={(e) => setData({...data, email: e.target.value})}/>
           </Form.Group>
 
           <Form.Group className="mb-4" controlId="formBasicPassword">
-            <Form.Control type="password" placeholder="Password"  className='custom-input'/>
+            <Form.Control type="password" placeholder="Password"  className='custom-input' value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
           </Form.Group>
 
           <Button variant="warning" type="submit" className='createAccountbutton'>
@@ -40,7 +73,7 @@ const Myform = () =>{
             By creating an account, you agree to our Terms and Conditions.
           </Form.Text><br/>
           <div className='nextAccount'>
-            Have an account? <Link to='/'>Login</Link>
+            Have an account? <Link to='/Login'>Login</Link>
           </div>
         </Form>
       </Container>
