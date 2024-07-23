@@ -29,6 +29,7 @@ const NavigationBar = () => {
                       <Nav.Link as={Link} to="/prices">Prices</Nav.Link>
                       <Nav.Link as={Link} to="/find-location">Find Location</Nav.Link>
                       <Nav.Link as={Link} to="/my-account">My Account</Nav.Link>
+                      <Nav.Link as={Link} to="/rewards">Loyalty Rewards</Nav.Link>
                   </Nav>
               </Navbar.Collapse>
           </Container>
