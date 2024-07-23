@@ -7,15 +7,23 @@ import Services from './pages/Services';
 import Prices from './pages/Prices';
 import FindLocation from './pages/FindLocation';
 import MyAccount from './pages/MyAccount';
+import Login from './pages/Login';
 import LoginPage from './components/LoginPage';
 
 
+import axios from 'axios';
+import { Toaster } from 'react-hot-toast';
+
+//use base url so i dont type again and again
+axios.defaults.baseURL = 'http://localhost:3001';
+axios.defaults.withCredentials = true
 
 
 const App = () => {
     return (
         <Router>
             <NavigationBar />
+            <Toaster position='bottom-right' toastOptions={{duration: 4000}}/>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -23,9 +31,7 @@ const App = () => {
                 <Route path="/prices" element={<Prices />} />
                 <Route path="/find-location" element={<FindLocation />} />
                 <Route path="/my-account" element={<MyAccount />} />
-                <Route path="/loginpage" element={<LoginPage/>} />
-
-                
+                <Route path="/login" element={Myform} />
             </Routes>
 
             
