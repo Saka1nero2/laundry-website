@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
-import './Home.css';
+import '../components/Home.css';
 import ImageSlider from '../components/CarouselPage';
 import Footer from '../components/footer';
 
