@@ -1,22 +1,14 @@
 import {React,useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import './Myform.css';
 import { Container} from 'react-bootstrap';
 import {faGoogle, faFacebook, faApple} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-<<<<<<< HEAD:src/components/Myform.js
 import { Link as RouterLink } from 'react-router-dom';
-
-
-
-const Myform = () =>{
-  
-=======
-import { Link } from 'react-router-dom';
 import axios from 'axios'
 import {toast} from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom';
+import './Myform.css';
 
 const Myform = () =>{
   const navigate = useNavigate()
@@ -45,7 +37,6 @@ const Myform = () =>{
     }
   }
 
->>>>>>> 5f61e6cd3e92b8babec58578042754dcbb14c932:src/components/Myform.jsx
   return(
     <div className='user-account'>
       <div>
@@ -81,13 +72,8 @@ const Myform = () =>{
           <Form.Text>
             By creating an account, you agree to our Terms and Conditions.
           </Form.Text><br/>
-<<<<<<< HEAD:src/components/Myform.js
           <div className="nextAccount">
-            Have an account? <RouterLink to="/loginpage">Login</RouterLink>
-=======
-          <div className='nextAccount'>
-            Have an account? <Link to='/Login'>Login</Link>
->>>>>>> 5f61e6cd3e92b8babec58578042754dcbb14c932:src/components/Myform.jsx
+            Have an account? <RouterLink to="/login">Login</RouterLink>
           </div>
         </Form>
       </Container>

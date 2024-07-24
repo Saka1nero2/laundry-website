@@ -1,5 +1,24 @@
-.carousel-indicators [data-bs-target]{
-  border-radius: 100%;
-  width: 20px;
-  height: 20px;
+image-slider-container {
+  max-width: 100%;
+  margin: auto;
+}
+
+.custom-carousel-image {
+  height: 60vh; /* Adjust height as needed */
+  object-fit: cover;
+}
+
+.custom-carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 5px;
+  color: #A3C9B8; /* White text */
+   /* White text */
+}
+
+.custom-carousel-text {
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  padding: 5px;
+  border-radius: 5px;
+  color: #A3C9B8; /* White text */
 }

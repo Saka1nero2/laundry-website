@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from '../components/HeroSection';
 import './Home.css';
 import ImageSlider from '../components/CarouselPage';
+import Footer from '../components/footer';
 
 
 
@@ -19,13 +20,13 @@ const Home = () => {
                     
                 </div>
       </section>
-      <div>
+      <div className='mb-5'>
         <ImageSlider/>
       </div>
 
       
         <div>
-          
+          <Footer/>
         </div>
     
       

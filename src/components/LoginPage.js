@@ -1,10 +1,11 @@
-import React from 'react';
+/*import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Container} from 'react-bootstrap';
 import {faGoogle, faFacebook, faApple} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link as RouterLink } from 'react-router-dom';
+import './LoginPage.css';
 
 const LoginPage= () =>{
   
@@ -49,4 +50,4 @@ const LoginPage= () =>{
 
 }
 
-export default LoginPage
+export default LoginPage*/

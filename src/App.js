@@ -7,12 +7,9 @@ import Services from './pages/Services';
 import Prices from './pages/Prices';
 import FindLocation from './pages/FindLocation';
 import MyAccount from './pages/MyAccount';
-import Login from './pages/Login';
-import LoginPage from './components/LoginPage';
-
-
 import axios from 'axios';
 import { Toaster } from 'react-hot-toast';
+import Login from './pages/Login';
 
 //use base url so i dont type again and again
 axios.defaults.baseURL = 'http://localhost:3001';
@@ -31,7 +28,7 @@ const App = () => {
                 <Route path="/prices" element={<Prices />} />
                 <Route path="/find-location" element={<FindLocation />} />
                 <Route path="/my-account" element={<MyAccount />} />
-                <Route path="/login" element={Myform} />
+                <Route path="/login" element={<Login/>} />
             </Routes>
 
             
