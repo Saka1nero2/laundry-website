@@ -1,0 +1,88 @@
+.booking-container {
+  padding: 2rem 0;
+}
+
+.progress-bar-container {
+  /*display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;*/
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.booking-title {
+  font-size: 2rem;
+  color: #ffc107;
+  text-align: center;
+}
+
+.booking-subtitle {
+  font-size: 1rem;
+  color: #6c757d;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #ffc107;
+  border: none;
+}
+
+.cancel-button {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #6c757d;
+  border: none;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+.progress-step {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #6c757d;
+  margin: 0 10px;
+  position: relative;
+}
+.progress-step.active {
+  background-color: #007bff;
+  color: #fff;
+}
+.progress-step::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 40px;
+  height: 2px;
+  background-color: #e9ecef;
+  transform: translateY(-50%);
+}
+.progress-step:last-child::after {
+  display: none;
+}
+
+.progress-step.active::after {
+  background-color: #007bff;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}

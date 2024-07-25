@@ -1,41 +1,64 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import {Card ,Button} from 'react-bootstrap';
+import '../components/PricesCard.css';
+import { useNavigate } from 'react-router-dom';
 
-const Prices = () => {
+const prices =[
+  { name : "Wash and Fold" , price : "20 to 30ghc per kilogram of laundry"},
+  { name: "Wash and Touch", price: "35 to 50ghc per kilogram of laundry" },
+  { name: "Ironing and Pressing", price: "3 to 7ghc per kilogram of laundry (Depends on nature of garment.)" },
+  { name: "Dry Washing", price: "35 to 50ghc per kilogram of laundry" },
+  { name: "Pick up and delivery", price: "Price will be added depending on the location upon delivery" }
+];
+
+const PricesCard = () => {
+  const [selectedPrice , setSelectedPrice] = useState(null);
+  const navigate = useNavigate();
+
+
+  const handlePriceClick = (price) => {
+      setSelectedPrice(price);
+  };
+
+  const handleChooseClick  = () =>{
+    if(selectedPrice){
+      alert(`You've chosen ${selectedPrice.name} priced at ${selectedPrice.price}`);
+      navigate('/find-location');
+    } else {
+      alert("Please select a price first");
+    }
+  }
+
+
+
+
+
   return (
-    <div className='d-flex justify-content-center my-5'>
-      <Card className='' style={{ width: '18rem' }}>
-        <Card.Body>
-          <Card.Title>Wash and Fold</Card.Title>
-          <Card.Text>
-            20 to 30ghc per kilogram of laundry
-          </Card.Text>
-
-          <Card.Title>Wash and Touch</Card.Title>
-          <Card.Text>
-            35 to 50ghc per kilogram of laundry
-          </Card.Text>
-
-          <Card.Title>Ironing and Pressing</Card.Title>
-          <Card.Text>
-            3 to 7ghc per kilogram of laundry (Depends on nature of garment.)
-          </Card.Text>
-
-          <Card.Title>Dry Washing</Card.Title>
-          <Card.Text>
-            35 to 50ghc per kilogram of laundry
-          </Card.Text>
-
-          <Card.Title>Pick up and delivery</Card.Title>
-          <Card.Text>
-            Price will be added depending on the location upon delivery
-          </Card.Text>
-
-          <Button variant="warning">Choose</Button>
-        </Card.Body>
-      </Card>
+    <div className="prices-card-container">
+          <Card className='prices-card'>
+            <Card.Body>
+              {prices.map((price, index) => (
+                <Card.Text
+                  key={index}
+                  className={`price-item ${selectedPrice === price ? 'selected' : ''}`}
+                  onClick={() => handlePriceClick(price)}
+                >
+                   <span className="price-name">{price.name}</span> - <span>{price.price}</span>
+                </Card.Text>
+              ))}
+              <Button 
+              variant="warning"
+              className='choose-button'
+              onClick = {handleChooseClick}
+              disabled={!selectedPrice}
+              >
+                Choose
+              </Button>
+              
+            </Card.Body>
+          </Card>
     </div>
   );
-}
 
-export default Prices;
+};
+export default PricesCard;
