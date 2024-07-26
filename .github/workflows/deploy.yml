@@ -1,0 +1,37 @@
+```
+name: Deploy to Github Pages
+on :
+  push : 
+    brnaches : 
+    - main 
+jobs: 
+  deploy:
+  runs-on: ubuntu-latest
+  steps:
+  -name: Checkout code
+  uses: actions/checkout@v3
+
+  -name: Install dependencies
+  run: npm install 
+
+  -name: Build and deploy
+  run: |
+    npm run build
+    git config --global user.email
+    "github-actions[bot]@(link unavailable)"
+      git config --global user.name
+    "github-actions[bot]"
+      git remote add origin (github.com/Saka1nero2/laundry-website)
+      git checkout -b main
+      git add .
+      git commit -m "Deploy to Github Pages"
+      git push origin main:gh-pages --force
+
+      -name: Deploy to GitHub Pages
+      uses: gh-pages/deploy@v1
+      with: 
+        token: ${{secrets.GITHUB_TOKEN}}
+        remote_branch: gh-pages
+
+  ```
+  
