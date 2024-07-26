@@ -1,11 +1,15 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { useLocation } from 'react-router-dom';
+import { useLocation , useNavigate} from 'react-router-dom';
 import '../components/OrderInformationPage.css';
 
 const OrderInformationPage = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { formData } = location.state || {};
+  const handleDelivery = () => {
+    navigate('/delivery-page');
+  };
 
   return (
     <Container className="order-info-container">
@@ -21,7 +25,7 @@ const OrderInformationPage = () => {
             <p><strong>Phone Number:</strong> {formData?.phoneNumber}</p>
           </div>
 
-          <Button variant="warning" className="proceed-button">
+          <Button variant="warning" className="proceed-button" onclick={handleDelivery}>
             Proceed
           </Button>
         </Col>

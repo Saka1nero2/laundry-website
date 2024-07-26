@@ -1,0 +1,21 @@
+.delivery-container {
+  margin-top: 50px;
+}
+
+.delivery-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.delivery-subtitle {
+  text-align: center;
+  color: gray;
+  margin-bottom: 30px;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
