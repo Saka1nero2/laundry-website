@@ -12,6 +12,7 @@ import { Toaster } from 'react-hot-toast';
 import Login from './pages/Login';
 import OrderInformationPage from './pages/OrderInformation';
 import DeliveryPage from './pages/DeliveryPage';
+import LoyaltyRewards from './pages/Reward';
 
 //use base url so i dont type again and again
 axios.defaults.baseURL = 'http://localhost:3001';
@@ -33,6 +34,7 @@ const App = () => {
                 <Route path="/login" element={<Login/>} />
                 <Route path="/order-information" element={<OrderInformationPage />} />
                 <Route path="/delivery-page" element={<DeliveryPage />} />
+                <Route path="/rewards" element={<LoyaltyRewards />} />
             </Routes>
 
             
