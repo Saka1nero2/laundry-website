@@ -30,14 +30,14 @@ const Footer = () => {
             <div>
               <h5>Connect Us</h5>
               <ul>
-                <li><i className="fa fa-envelope"></i> SudsWash@gmail.com</li>
+                <li><i className="fa fa-envelope"></i> LaundryKing@gmail.com</li>
                 <li><i className="fa fa-phone"></i> 0242455562</li>
                 <li><i className="fa fa-phone"></i> 0242455562</li>
                 <li><i className="fa fa-map-marker"></i> Parku Estate</li>
               </ul>
             </div>
           </Row>
-          <p>Copyright 2024 • All rights reserved • SudsWash</p>
+          <p>Copyright 2024 • All rights reserved • LaundryKing</p>
         </Container>
       </footer>
     </>
