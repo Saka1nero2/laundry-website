@@ -22,7 +22,8 @@ axios.defaults.withCredentials = true
 const App = () => {
     return (
         <Router>
-            <NavigationBar />
+            <Link to="/#about-us"><NavigationBar /></Link>
+            
             <Toaster position='bottom-right' toastOptions={{duration: 4000}}/>
             <Routes>
                 <Route path="/" element={<Home />} />
