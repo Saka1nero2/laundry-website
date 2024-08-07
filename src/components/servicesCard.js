@@ -21,7 +21,7 @@ function ServicesPage(){
       <Row className="justify-content-center">
         <Col md={6} lg={4} className="mb-5">
           <h4 className="service-title">WASH AND FOLD</h4>
-          <Link to="/prices#wash-and-fold">
+          <Link to="/prices#wash-and-fold" className='card-link'>
             <Card className="custom-card">
               <Card.Img variant="top" src={service1} />
               <Card.Body>
@@ -36,7 +36,7 @@ function ServicesPage(){
         </Col>
         <Col md={6} lg={4} className="mb-5">
           <h4 className="service-title">WASH AND TOUCH</h4>
-          <Link to="/prices#wash-and-touch">
+          <Link to="/prices#wash-and-touch" className='card-link'>
             <Card className="custom-card">
               <Card.Img variant="top" src={service2} />
               <Card.Body>
@@ -51,7 +51,7 @@ function ServicesPage(){
         </Col>
         <Col md={6} lg={4} className="mb-5">
           <h4 className="service-title">IRONING & PRESSING</h4>
-          <Link to="/prices#iron-pressing">
+          <Link to="/prices#iron-pressing" className='card-link'>
             <Card className="custom-card">
               <Card.Img variant="top" src={service3}/>
               <Card.Body>
@@ -66,7 +66,7 @@ function ServicesPage(){
         </Col>
         <Col md={6} lg={4} className="mb-5">
           <h4 className="service-title">DRY WASHING</h4>
-          <Link to="/prices#dry-washing">
+          <Link to="/prices#dry-washing" className='card-link'>
             <Card className="custom-card">
               <Card.Img variant="top" src={service4} />
               <Card.Body>
@@ -81,7 +81,7 @@ function ServicesPage(){
         </Col>
         <Col md={6} lg={4} className="mb-5">
           <h4 className="service-title">CONTRACTUAL</h4>
-          <Link to="/prices#pick-up-and-delivery">
+          <Link to="/prices#pick-up-and-delivery" className='card-link'>
             <Card className="custom-card">
               <Card.Img variant="top" src={service5} />
               <Card.Body>

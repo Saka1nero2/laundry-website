@@ -4,7 +4,7 @@ import '../components/Reward.css';
 
 const LoyaltyRewards = () => {
   return(
-    <Container>
+    <Container className='container-main'>
         <h2 className='text-center'>Earn Points/Rewards for Patronizing Laundry King</h2>
         <p className='text-center'>At laundry king , we value our customers and want to thank you for choosing us for your laundry needs .That's why we created Clean Rewards,our loyalty program designed to reward you for your continued trust in our services.</p>
 

@@ -17,8 +17,9 @@ const NavigationBar = () => {
                 className='d-inline-block align-top'
                 alt="Laundry King"
                 />
-                {''}
-                Laundry King
+                <Link to="/" className="brand-name">
+                    <span className="ms-2">LaundryKing</span>
+                </Link>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
