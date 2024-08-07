@@ -1,15 +1,28 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link , useLocation} from 'react-router-dom';
 
 import picture from '../assets/images/picture.png';
 import './Navbar.css';
 
 const NavigationBar = () => {
+    const [expanded, setExpanded] = useState(false);
+    const location = useLocation();
+  
+    const handleNavClick = () => {
+      setExpanded(false);
+    };
+  
+    React.useEffect(() => {
+      setExpanded(false); // Close the navbar when the route changes
+    }, [location]);
+
+
+
   return (
-      <Navbar bg="light" expand="lg" fixed='top'>
+      <Navbar bg="light" expand="lg" fixed='top' expanded={expanded}>
           <Container>
-              <Navbar.Brand as={Link} to="/">
+              <Navbar.Brand as={Link} to="/" onClick={handleNavClick}>
                 <img
                 src={picture}
                 width="30"
@@ -21,16 +34,16 @@ const NavigationBar = () => {
                     <span className="ms-2">LaundryKing</span>
                 </Link>
               </Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Toggle aria-controls="basic-navbar-nav"  onClick={() => setExpanded(!expanded)}/>
               <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="ms-auto">
-                      <Nav.Link as={Link} to="/">Home</Nav.Link>
-                      <Nav.Link href="/#about-us">About</Nav.Link>
-                      <Nav.Link as={Link} to="/services">Services</Nav.Link>
-                      <Nav.Link as={Link} to="/prices">Prices</Nav.Link>
-                      <Nav.Link as={Link} to="/find-location">Find Location</Nav.Link>
-                      <Nav.Link as={Link} to="/my-account">My Account</Nav.Link>
-                      <Nav.Link as={Link} to="/rewards">Loyalty Rewards</Nav.Link>
+                      <Nav.Link as={Link} to="/" onClick={handleNavClick}>Home</Nav.Link>
+                      <Nav.Link href="/#about-us" onClick={handleNavClick}>About</Nav.Link>
+                      <Nav.Link as={Link} to="/services" onClick={handleNavClick}>Services</Nav.Link>
+                      <Nav.Link as={Link} to="/prices" onClick={handleNavClick}>Prices</Nav.Link>
+                      <Nav.Link as={Link} to="/find-location" onClick={handleNavClick}>Find Location</Nav.Link>
+                      <Nav.Link as={Link} to="/my-account" onClick={handleNavClick}>My Account</Nav.Link>
+                      <Nav.Link as={Link} to="/rewards" onClick={handleNavClick}>Loyalty Rewards</Nav.Link>
                   </Nav>
               </Navbar.Collapse>
           </Container>
