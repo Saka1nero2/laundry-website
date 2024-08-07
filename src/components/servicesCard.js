@@ -1,12 +1,13 @@
 import React from 'react';
 import {Container,Row ,Col ,Card} from 'react-bootstrap';
-import service1 from '../assets/images/service1.jpeg'
-import service2 from '../assets/images/service2.jpeg'
-import service3 from '../assets/images/service3.jpeg'
-import service4 from '../assets/images/service4.jpeg'
-import service5 from '../assets/images/service5.jpeg'
-import service6 from '../assets/images/service6.jpeg'
+import service1 from '../assets/images/service1.jpeg';
+import service2 from '../assets/images/service2.jpeg';
+import service3 from '../assets/images/service3.jpeg';
+import service4 from '../assets/images/service4.jpeg';
+import service5 from '../assets/images/service5.jpeg';
+import service6 from '../assets/images/service6.jpeg';
 import '../components/servicesCard.css';
+import { Link } from 'react-router-dom';
 
 
 function ServicesPage(){
@@ -20,62 +21,77 @@ function ServicesPage(){
       <Row className="justify-content-center">
         <Col md={6} lg={4} className="mb-5">
           <h4 className="service-title">WASH AND FOLD</h4>
-          <Card className="custom-card">
-            <Card.Img variant="top" src={service1} />
-            <Card.Body>
-              <Card.Text>
-                Customers clothes are washed and folded without ironing.
-                20 to 30 cedis per kilogram of laundry.
-              </Card.Text>
-            </Card.Body>
-          </Card>
+          <Link to="/prices#wash-and-fold">
+            <Card className="custom-card">
+              <Card.Img variant="top" src={service1} />
+              <Card.Body>
+                <Card.Text>
+                  Customers clothes are washed and folded without ironing.
+                  20 to 30 cedis per kilogram of laundry.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Link>
+          
         </Col>
         <Col md={6} lg={4} className="mb-5">
           <h4 className="service-title">WASH AND TOUCH</h4>
-          <Card className="custom-card">
-            <Card.Img variant="top" src={service2} />
-            <Card.Body>
-              <Card.Text>
-                Customers clothes are washed,ironed and folded with a a touch of refreshing garment aroma.
-                Price range : 35 cedis to 50 cedis per kilogram of laundry.
-              </Card.Text>
-            </Card.Body>
-          </Card>
+          <Link to="/prices#wash-and-touch">
+            <Card className="custom-card">
+              <Card.Img variant="top" src={service2} />
+              <Card.Body>
+                <Card.Text>
+                  Customers clothes are washed,ironed and folded with a a touch of refreshing garment aroma.
+                  Price range : 35 cedis to 50 cedis per kilogram of laundry.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Link>
+          
         </Col>
         <Col md={6} lg={4} className="mb-5">
           <h4 className="service-title">IRONING & PRESSING</h4>
-          <Card className="custom-card">
-            <Card.Img variant="top" src={service3}/>
-            <Card.Body>
-              <Card.Text>
-                Offer Ironing services for clothes that need a crisp finish.
-                Price range : 3 cedis to 7 cedis.Depending on the nature of the garment.
-              </Card.Text>
-            </Card.Body>
-          </Card>
+          <Link to="/prices#iron-pressing">
+            <Card className="custom-card">
+              <Card.Img variant="top" src={service3}/>
+              <Card.Body>
+                <Card.Text>
+                  Offer Ironing services for clothes that need a crisp finish.
+                  Price range : 3 cedis to 7 cedis.Depending on the nature of the garment.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Link>
+          
         </Col>
         <Col md={6} lg={4} className="mb-5">
           <h4 className="service-title">DRY WASHING</h4>
-          <Card className="custom-card">
-            <Card.Img variant="top" src={service4} />
-            <Card.Body>
-              <Card.Text>
-                Specialised cleaning for delicate fabrics,suits and formal wears.
-                Price range:
-              </Card.Text>
-            </Card.Body>
-          </Card>
+          <Link to="/prices#dry-washing">
+            <Card className="custom-card">
+              <Card.Img variant="top" src={service4} />
+              <Card.Body>
+                <Card.Text>
+                  Specialised cleaning for delicate fabrics,suits and formal wears.
+                  Price range:
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Link>
+          
         </Col>
         <Col md={6} lg={4} className="mb-5">
           <h4 className="service-title">CONTRACTUAL</h4>
-          <Card className="custom-card">
-            <Card.Img variant="top" src={service5} />
-            <Card.Body>
-              <Card.Text>
-                Social / Corporate wash 
-              </Card.Text>
-            </Card.Body>
-          </Card>
+          <Link to="/prices#pick-up-and-delivery">
+            <Card className="custom-card">
+              <Card.Img variant="top" src={service5} />
+              <Card.Body>
+                <Card.Text>
+                  Social / Corporate wash 
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Link>
+          
         </Col>
         <Col md={6} lg={4} className="mb-5">
           <h4 className="service-title">SPECIALITY SERVICES</h4>
