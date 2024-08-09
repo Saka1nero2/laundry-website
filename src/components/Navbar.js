@@ -41,7 +41,7 @@ const NavigationBar = () => {
                       <Nav.Link href="/#about-us" onClick={handleNavClick}>About</Nav.Link>
                       <Nav.Link as={Link} to="/services" onClick={handleNavClick}>Services</Nav.Link>
                       <Nav.Link as={Link} to="/prices" onClick={handleNavClick}>Prices</Nav.Link>
-                      <Nav.Link as={Link} to="/find-location" onClick={handleNavClick}>Find Location</Nav.Link>
+                      <Nav.Link as={Link} to="/booking" onClick={handleNavClick}>Booking</Nav.Link>
                       <Nav.Link as={Link} to="/my-account" onClick={handleNavClick}>My Account</Nav.Link>
                       <Nav.Link as={Link} to="/rewards" onClick={handleNavClick}>Loyalty Rewards</Nav.Link>
                   </Nav>

@@ -4,7 +4,7 @@ import NavigationBar from './components/Navbar';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Prices from './pages/Prices';
-import FindLocation from './pages/BookingPage';
+import BookingPage from './pages/BookingPage';
 import MyAccount from './pages/MyAccount';
 import axios from 'axios';
 import { Toaster } from 'react-hot-toast';
@@ -29,7 +29,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/prices" element={<Prices />} />
-                <Route path="/booking" element={<Booking />} />
+                <Route path="/booking-page" element={<BookingPage />} />
                 <Route path="/my-account" element={<MyAccount />} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/order-information" element={<OrderInformationPage />} />
