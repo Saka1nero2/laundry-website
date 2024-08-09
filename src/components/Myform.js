@@ -1,14 +1,15 @@
-import {React,useState} from 'react';
+import React , {useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Container} from 'react-bootstrap';
-import {faGoogle, faFacebook, faApple} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {Container}from 'react-bootstrap';
 import { Link as RouterLink } from 'react-router-dom';
 import axios from 'axios'
 import {toast} from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom';
 import './Myform.css';
+import googleicon from '../assets/images/googleicon.png';
+import facebookicon from '../assets/images/facebookicon.png';
+import appleicon from  '../assets/images/appleicon.png';
 
 const Myform = () =>{
   const navigate = useNavigate()
@@ -64,9 +65,9 @@ const Myform = () =>{
           <div className='formText'>or Login with</div>
 
           <div className='social-login'>
-              <FontAwesomeIcon icon={faGoogle} size='2x'  className='icon' />
-              <FontAwesomeIcon icon={faFacebook} size='2x'  className='icon'/>
-              <FontAwesomeIcon icon={faApple} size='2x' className='icon'/>
+             <img src={googleicon} alt='Google' className='icon'/>
+             <img src={facebookicon} alt='Facebook' className='icon'/>
+             <img src={appleicon} alt='Apple' className='icon'/>
           </div>
 
           <Form.Text>
