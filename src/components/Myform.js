@@ -27,6 +27,13 @@ const Myform = () => {
 
   const googleAuthUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${googleClientId}&redirect_uri=${redirectUri}&scope=${scope}&response_type=${responseType}&include_granted_scopes=true`;
 
+  // Facebook OAuth configuration
+  const facebookAppId = 'YOUR_FACEBOOK_APP_ID'; // Replace with your actual Facebook App ID
+  const facebookRedirectUri = 'https://laundryking.netlify.app/'; // Replace with your actual redirect URI
+  const facebookScope = 'email,public_profile';
+
+  const facebookAuthUrl = `https://www.facebook.com/v12.0/dialog/oauth?client_id=${facebookAppId}&redirect_uri=${facebookRedirectUri}&scope=${facebookScope}&response_type=token`;
+
   const registerUser = async (e) => {
     e.preventDefault();
     const { name, email, password } = data;
@@ -74,7 +81,9 @@ const Myform = () => {
             <a href={googleAuthUrl}>
               <img src={googleicon} alt='Google' className='icon' />
             </a>
-            <img src={facebookicon} alt='Facebook' className='icon' />
+            <a href={facebookAuthUrl}>
+              <img src={facebookicon} alt='Facebook' className='icon' />
+            </a>
             <img src={appleicon} alt='Apple' className='icon' />
           </div>
 
