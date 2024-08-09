@@ -32,7 +32,7 @@ const PricesCard = () => {
   const handleChooseClick  = () =>{
     if(selectedPrice){
       alert(`You've chosen ${selectedPrice.name} priced at ${selectedPrice.price}`);
-      navigate('/find-location');
+      navigate('/booking');
     } else {
       alert("Please select a price first");
     }
