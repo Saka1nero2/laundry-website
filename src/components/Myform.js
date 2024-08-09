@@ -28,7 +28,7 @@ const Myform = () => {
   const googleAuthUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${googleClientId}&redirect_uri=${redirectUri}&scope=${scope}&response_type=${responseType}&include_granted_scopes=true`;
 
   // Facebook OAuth configuration
-  const facebookAppId = 'YOUR_FACEBOOK_APP_ID'; // Replace with your actual Facebook App ID
+  const facebookAppId = '1177688713446022'; // Replace with your actual Facebook App ID
   const facebookRedirectUri = 'https://laundryking.netlify.app/'; // Replace with your actual redirect URI
   const facebookScope = 'email,public_profile';
 
