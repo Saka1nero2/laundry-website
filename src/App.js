@@ -13,6 +13,7 @@ import OrderInformationPage from './pages/OrderInformation';
 import DeliveryPage from './pages/DeliveryPage';
 import LoyaltyRewards from './pages/Reward';
 
+
 //use base url so i dont type again and again
 axios.defaults.baseURL = 'http://localhost:3001';
 axios.defaults.withCredentials = true
