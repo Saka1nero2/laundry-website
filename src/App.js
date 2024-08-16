@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import OrderInformationPage from './pages/OrderInformation';
 import DeliveryPage from './pages/DeliveryPage';
 import LoyaltyRewards from './pages/Reward';
+import PickupSchedulingPage from './pages/PickupSchedulingPage';
 
 
 //use base url so i dont type again and again
@@ -35,6 +36,7 @@ const App = () => {
                 <Route path="/order-information" element={<OrderInformationPage />} />
                 <Route path="/delivery-page" element={<DeliveryPage />} />
                 <Route path="/rewards" element={<LoyaltyRewards />} />
+                <Route path="/pickup-scheduling-page" element={<PickupSchedulingPage />} />
             </Routes>
 
             

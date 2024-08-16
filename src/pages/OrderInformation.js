@@ -7,9 +7,11 @@ const OrderInformationPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { formData } = location.state || {};
-  const handleDelivery = () => {
-    navigate('/delivery-page');
+  
+  const handlePickupScheduling = () => {
+    navigate('/pickup-scheduling-page', { state: { formData } });
   };
+
 
   return (
     <Container className="order-info-container">
@@ -23,10 +25,11 @@ const OrderInformationPage = () => {
             <p><strong>Last Name:</strong> {formData?.lastName}</p>
             <p><strong>Email:</strong> {formData?.email}</p>
             <p><strong>Phone Number:</strong> {formData?.phoneNumber}</p>
+            
           </div>
 
-          <Button variant="warning" className="proceed-button" onclick={handleDelivery}>
-            Proceed
+          <Button variant="warning" className="proceed-button" onClick={handlePickupScheduling}>
+            Schedule Pickup
           </Button>
         </Col>
       </Row>

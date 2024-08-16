@@ -32,7 +32,7 @@ const PricesCard = () => {
   const handleChooseClick  = () =>{
     if(selectedPrice){
       alert(`You've chosen ${selectedPrice.name} priced at ${selectedPrice.price}`);
-      navigate('/booking');
+      navigate('/booking-page');
     } else {
       alert("Please select a price first");
     }
@@ -49,7 +49,7 @@ const PricesCard = () => {
               {prices.map((price, index) => (
                 <Card.Text
                   key={index}
-                  id={prices.id}
+                  id={price.id}
                   className={`price-item ${selectedPrice === price ? 'selected' : ''}`}
                   onClick={() => handlePriceClick(price)}
                 >

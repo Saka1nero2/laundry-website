@@ -1,0 +1,48 @@
+.pickup-container {
+  min-height: calc(100vh - 60px); /* Adjust 60px based on your nav bar height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Center content within the container */
+.pickup-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.pickup-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.pickup-container .form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+}
+
+.button {
+  width: 100%;
+}
+
+.btn-warning {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+  color: #fff;
+  margin-top: 8px;
+}
+
+.btn-warning:hover {
+  background-color: #ec971f;
+  border-color: #d58512;
+}
