@@ -24,7 +24,7 @@ const PickupSchedulingPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/location-selection', {
+    navigate('/location-page', {
       state: { formData, selectedService, cost, pickupData },
     });
   };
