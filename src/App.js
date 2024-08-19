@@ -16,8 +16,7 @@ import PickupSchedulingPage from './pages/PickupSchedulingPage';
 import LocationPage from './pages/LocationPage';
 
 
-//use base url so i dont type again and again
-axios.defaults.baseURL = 'http://localhost:3001';
+axios.defaults.baseURL = 'http://localhost:5001';
 axios.defaults.withCredentials = true
 
 
