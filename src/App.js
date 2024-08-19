@@ -8,10 +8,6 @@ import BookingPage from './pages/BookingPage';
 import MyAccount from './pages/MyAccount';
 import axios from 'axios';
 import { Toaster } from 'react-hot-toast';
-//import LoginPage from './components/LoginPage';
-
-
-
 import Login from './pages/Login';
 import OrderInformationPage from './pages/OrderInformation';
 import DeliveryPage from './pages/DeliveryPage';
