@@ -1,8 +1,13 @@
 const express = require("express");
-const dotenv = require("dotenv").config()
-const cors = require("cors")
-const {mongoose} = require("mongoose")
-const app = express()
+const dotenv = require("dotenv");
+const cors = require("cors");
+const {mongoose} = require("mongoose");
+const orderRoutes = require('./routes/orderRoutes');
+const serviceRoutes = require('./routes/serviceRoutes');
+
+dotenv.config();
+
+const app = express();
 
 mongoose
     .connect(process.env.MONGO_URL)
