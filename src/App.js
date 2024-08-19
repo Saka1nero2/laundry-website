@@ -6,7 +6,6 @@ import Services from './pages/Services';
 import Prices from './pages/Prices';
 import BookingPage from './pages/BookingPage';
 import MyAccount from './pages/MyAccount';
-import Myform from '../components/Myform';
 import axios from 'axios';
 import { Toaster } from 'react-hot-toast';
 //import LoginPage from './components/LoginPage';
