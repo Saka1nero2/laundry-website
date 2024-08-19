@@ -5,7 +5,7 @@ import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 const LocationPage = ({ google }) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState({ lat: 5.6037, lng: -0.187 });
-  const [locationConfirmed, setLocationConfirmed] = useState(false);
+  
 
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
@@ -17,11 +17,11 @@ const LocationPage = ({ google }) => {
 
   const onMapClicked = (mapProps, map, clickEvent) => {
     setSelectedLocation({ lat: clickEvent.latLng.lat(), lng: clickEvent.latLng.lng() });
-    setLocationConfirmed(false); // Reset confirmation status on new selection
+    // Reset confirmation status on new selection
   };
 
   const confirmLocation = () => {
-    setLocationConfirmed(true);
+    
     setShowModal(false); // Close the modal after confirming
   };
 
