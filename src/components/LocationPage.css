@@ -1,0 +1,40 @@
+.container-fluid {
+  max-width: 800px;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #FFD700; /* Gold color for titles */
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.button-delivery {
+  background-color: #FFD700;
+  border-color: #FFD700;
+}
+
+.button-pickup {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.button-delivery:hover,
+.button-pickup:hover {
+  background-color: #f7c046;
+}
+
+.form-check-label {
+  font-size: 1.1rem;
+}
+
+.text-end {
+  text-align: end;
+}

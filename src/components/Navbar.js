@@ -2,7 +2,7 @@ import React ,{useState} from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link , useLocation} from 'react-router-dom';
 
-import picture from '../assets/images/picture.png';
+import picture from '../assets/images/logo.jpg';
 import './Navbar.css';
 
 const NavigationBar = () => {
@@ -25,14 +25,14 @@ const NavigationBar = () => {
               <Navbar.Brand as={Link} to="/" onClick={handleNavClick}>
                 <img
                 src={picture}
-                width="30"
-                height="30"
+                width="70"
+                height="70"
                 className='d-inline-block align-top'
                 alt="Laundry King"
                 />
-                <Link to="/" className="brand-name">
+                {/*<Link to="/" className="brand-name">
                     <span className="ms-2">LaundryKing</span>
-                </Link>
+                </Link>*/}
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav"  onClick={() => setExpanded(!expanded)}/>
               <Navbar.Collapse id="basic-navbar-nav">

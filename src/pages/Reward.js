@@ -1,6 +1,7 @@
 import React from 'react';
 import {Container ,Row,Col , Card ,Button} from 'react-bootstrap';
 import '../components/Reward.css';
+import Footer from '../components/footer';
 
 const LoyaltyRewards = () => {
   return(
@@ -76,7 +77,10 @@ const LoyaltyRewards = () => {
                 <p>Thank you for choosing Laundry King. We look forward to rewarding your loyalty!</p>
             </Col>
         </Row>
+
+        <Footer />
     </Container>
+    
   );
 }
 export default LoyaltyRewards;
