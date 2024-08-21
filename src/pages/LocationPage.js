@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form, Card, Modal } from 'react-bootstrap';
-import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { Map, Marker, GoogleApiWrapper } from '@react-google-maps/api';
 
 const LocationPage = ({ google }) => {
   const [showModal, setShowModal] = useState(false);
