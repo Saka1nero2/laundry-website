@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form, Card, Modal } from 'react-bootstrap';
-import { Map, Marker, GoogleApiWrapper } from '@react-google-maps/api';
+
 
 const LocationPage = ({ google }) => {
   const [showModal, setShowModal] = useState(false);
-  const [selectedLocation, setSelectedLocation] = useState({ lat: 5.6037, lng: -0.187 });
+  const [selectedLocation] = useState({ lat: 5.6037, lng: -0.187 });
   
 
   const handleClose = () => setShowModal(false);
@@ -15,10 +15,10 @@ const LocationPage = ({ google }) => {
     alert('Location copied to clipboard!');
   };
 
-  const onMapClicked = (mapProps, map, clickEvent) => {
+  /*const onMapClicked = (clickEvent)  => {
     setSelectedLocation({ lat: clickEvent.latLng.lat(), lng: clickEvent.latLng.lng() });
     // Reset confirmation status on new selection
-  };
+  };*/
 
   const confirmLocation = () => {
     
@@ -82,15 +82,7 @@ const LocationPage = ({ google }) => {
             <Card.Body>
               <Card.Title className="text-center">Location</Card.Title>
               <div style={{ height: '300px', width: '100%', position: 'relative' }}>
-                <Map
-                  google={google}
-                  initialCenter={selectedLocation}
-                  zoom={15}
-                  style={{ width: '100%', height: '100%' }}
-                  onClick={onMapClicked}
-                >
-                  <Marker position={selectedLocation} />
-                </Map>
+               
               </div>
               <div className="text-center mt-2">
                 <Button variant="primary" onClick={handleShow}>
@@ -154,6 +146,5 @@ const LocationPage = ({ google }) => {
   );
 };
 
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCVr5EtyEQM7M-7dfkFTZHprb4EoA9gdgQ' // Replace with your Google Maps API key
-})(LocationPage);
+export default LocationPage;
+
