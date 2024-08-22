@@ -53,7 +53,7 @@ const Myform = () => {
 
   return (
     <div className='user-account'>
-      <div>
+      <div className='heading-account'>
         <h4>Create Account</h4>
       </div>
 
